@@ -1,5 +1,6 @@
 // Routes module - Organize API routes by feature
 pub mod contact_routes;
+pub mod contact_filter_routes;
 pub mod organization_routes;
 pub mod user_routes;
 pub mod user_organization_routes;

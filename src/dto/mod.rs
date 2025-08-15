@@ -1,5 +1,6 @@
 // DTO module - Data Transfer Objects
 pub mod contact_dto;
+pub mod contact_filter_dto;
 pub mod organization_dto;
 pub mod role_dto;
 pub mod user_dto;

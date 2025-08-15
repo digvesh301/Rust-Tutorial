@@ -20,8 +20,10 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 uuid = { version = "1.0", features = ["v4", "serde"] }
 chrono = { version = "0.4", features = ["serde"] }
 validator = { version = "0.16", features = ["derive"] }
-sqlx = { version = "0.6", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
+sqlx = { version = "0.6", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid", "bigdecimal"] }
+bigdecimal = { version = "0.3", features = ["serde"] }
 dotenvy = "0.15.7"
 bcrypt = "0.17.0"
 rand = "0.9.1"
 jsonwebtoken = "9.3.1"
+rust_decimal = { version = "1.32", features = ["serde"] }

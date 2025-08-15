@@ -1,5 +1,6 @@
 // Services module - Business logic layer
 pub mod contact_service;
+pub mod contact_filter_service;
 pub mod organization_service;
 pub mod permission_service;
 pub mod user_organization_service;

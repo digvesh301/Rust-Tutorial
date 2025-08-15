@@ -25,6 +25,7 @@ use tracing::{info, Level};
 
 use survey::routes::{
     contact_routes, contact_routes_with_permissions,
+    contact_filter_routes::contact_filter_routes_with_permissions,
     user_routes, public_user_routes,
     organization_routes,
     user_organization_routes,
@@ -113,10 +114,12 @@ fn create_app(app_state: AppState) -> Router {
     // Permission-protected routes (authentication + permission required)
     let permission_protected_routes = Router::new()
         .merge(contact_routes_with_permissions())
+        .merge(contact_filter_routes_with_permissions())
         .layer(from_fn_with_state(
-            app_state.clone(),
+            app_state.db.clone(),
             jwt_auth_middleware,
-        ));
+        ))
+        .with_state(app_state.clone());
 
 
 
